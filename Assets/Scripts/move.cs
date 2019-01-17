@@ -15,9 +15,12 @@ public class move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey("f")){
-             transform.Translate(0, 100*Time.deltaTime, 0);
+        //if(Input.GetKey("f")){
+             //transform.Translate(0, 100*Time.deltaTime, 0);
 
-        }
+        //}
+    }
+    void OntriggerEnter(Collider other){
+        Debug.Log("Si esta colicionando");
     }
 }

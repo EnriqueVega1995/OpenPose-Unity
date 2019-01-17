@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{02C03E8C-6E83-C1D4-32F1-60A1F0496B0D}</ProjectGuid>
+    <ProjectGuid>{090D61E5-8A25-44A3-A5B0-F6801976F7BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -65,20 +65,22 @@
      <Compile Include="Assets\OpenPose\Modules\Scripts\OPWrapper.cs" />
      <Compile Include="Assets\Scripts\collider.cs" />
      <Compile Include="Assets\Scripts\move.cs" />
+     <Compile Include="Assets\Scripts\timer.cs" />
      <Compile Include="Assets\Scripts\verificacion.cs" />
+     <Compile Include="Assets\VideoPlayerControl\VideoProgressBar.cs" />
      <None Include="Assets\OpenPose\Examples\Render\RGB_2_BGR_UI_Shader.shader" />
      <None Include="Assets\StreamingAssets\models\face\haarcascade_frontalface_alt.xml" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/User/Documents/OpenPose_Unity/openpose_unity_plugin/OpenPosePlugin/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Documents/OpenPose_Unity/twister/OpenPosePlugin_Twister/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/User/Documents/OpenPose_Unity/openpose_unity_plugin/OpenPosePlugin/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Documents/OpenPose_Unity/twister/OpenPosePlugin_Twister/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/User/Documents/OpenPose_Unity/openpose_unity_plugin/OpenPosePlugin/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Documents/OpenPose_Unity/twister/OpenPosePlugin_Twister/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/User/Documents/OpenPose_Unity/openpose_unity_plugin/OpenPosePlugin/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/User/Documents/OpenPose_Unity/twister/OpenPosePlugin_Twister/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
