@@ -11,7 +11,7 @@ namespace OpenPose.Example {
      * Active: whether the score of that keypoint is larger than ScoreThres
      */
     public class HumanController2D : MonoBehaviour {
-
+         
         public int PoseKeypointsCount = 25;
         public int HandKeypointsCount = 21;
         public int FaceKeypointsCount = 70;
@@ -34,7 +34,6 @@ namespace OpenPose.Example {
             DrawFace(ref datum, bodyIndex, scoreThres);
             DrawRectangles(ref datum, bodyIndex);
         }
-
         private void DrawBody(ref OPDatum datum, int bodyIndex, float scoreThres){
             if (datum.poseKeypoints == null || bodyIndex >= datum.poseKeypoints.GetSize(0)) {
                 PoseParent.gameObject.SetActive(false);
@@ -42,7 +41,7 @@ namespace OpenPose.Example {
             } else {
                 PoseParent.gameObject.SetActive(true);
             }
-            // Pose
+            // Pose 
             for (int part = 0; part < poseJoints.Count; part++) {
                 // Joints overflow
                 if (part >= datum.poseKeypoints.GetSize(1)) {
@@ -59,7 +58,6 @@ namespace OpenPose.Example {
                 }
             }
         }
-
         private void DrawHand(ref OPDatum datum, int bodyIndex, float scoreThres) {
             // Left
             if (datum.handKeypoints == null || bodyIndex >= datum.handKeypoints.left.GetSize(0)){
@@ -104,7 +102,6 @@ namespace OpenPose.Example {
                 }
             }
         }
-
         private void DrawFace(ref OPDatum datum, int bodyIndex, float scoreThres){
             // Face
             if (datum.faceKeypoints == null || bodyIndex >= datum.faceKeypoints.GetSize(0)) {
@@ -130,7 +127,6 @@ namespace OpenPose.Example {
                 }
             }
         }
-
         private void DrawRectangles(ref OPDatum datum, int bodyIndex){
             // Hand rect
             if (datum.handRectangles == null || bodyIndex >= datum.handRectangles.Count){
@@ -147,7 +143,6 @@ namespace OpenPose.Example {
                 RHandRectangle.localPosition = rects.right.center;
                 RHandRectangle.sizeDelta = rects.right.size;
             }
-
             // Face rect
             if (datum.faceRectangles == null || bodyIndex >= datum.faceRectangles.Count){
                 FaceRectangle.gameObject.SetActive(false);
@@ -157,12 +152,10 @@ namespace OpenPose.Example {
                 FaceRectangle.sizeDelta = datum.faceRectangles[bodyIndex].size;
             }
         }
-
         // Use this for initialization
         void Start() {
             InitJoints();
         }
-
         private void InitJoints() {
             // Pose
             if (PoseParent) {

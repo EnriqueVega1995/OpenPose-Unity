@@ -64,7 +64,6 @@
      <Compile Include="Assets\OpenPose\Modules\Scripts\OPOutputParser.cs" />
      <Compile Include="Assets\OpenPose\Modules\Scripts\OPWrapper.cs" />
      <Compile Include="Assets\Scripts\collider.cs" />
-     <Compile Include="Assets\Scripts\move.cs" />
      <Compile Include="Assets\Scripts\timer.cs" />
      <Compile Include="Assets\Scripts\verificacion.cs" />
      <Compile Include="Assets\VideoPlayerControl\VideoProgressBar.cs" />

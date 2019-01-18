@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class collider : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class collider : MonoBehaviour
     Vector3 Rango_obj2;
     Vector3 Rango_obj3;
     Vector3 pos;
+    public Text puntos;
+    int total_puntos = 0;
     public GameObject obj_1;
     public GameObject obj_2;
     public GameObject obj_3;
@@ -24,15 +27,17 @@ public class collider : MonoBehaviour
         Rango_obj1= new Vector3(Random.Range(-450,-40),Random.Range(290,0),0);
         Rango_obj2= new Vector3(Random.Range(40,450),Random.Range(290,0),0);
         Rango_obj3= new Vector3(Random.Range(-450,450),Random.Range(-100,-300),0);
-
+        puntos.text = "Puntos: " + total_puntos;
         if(obj_1.gameObject.tag=="obj" && obj_2.gameObject.tag=="obj" && obj_3.gameObject.tag=="obj"){
             obj_1.gameObject.transform.position = Rango_obj1;
             obj_2.gameObject.transform.position = Rango_obj2;
             obj_3.gameObject.transform.position = Rango_obj3;
+            total_puntos ++;
+            Debug.Log(total_puntos);
         }
         //cubo_1.transform.Rotate(0,1f,0);
     }
-    void OnTriggerEnter (Collider other){
+    void OnTriggerStay (Collider other){
 		//Debug.Log ("dentro delcollider");
 		if (other.gameObject.tag == "Player") {
             //Debug.Log("Colider del Cubo");
