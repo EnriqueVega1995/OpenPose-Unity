@@ -29,7 +29,7 @@ public class timer : MonoBehaviour
             obj_1.SetActive(true);
             obj_2.SetActive(true);
             obj_3.SetActive(true);
-            hardRestartGame();
+            //SceneManager.LoadScene("Test");
             
         }
         if(timeRemaining <= 0){
@@ -50,5 +50,5 @@ public class timer : MonoBehaviour
     }
     void hardRestartGame() {
      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
- }
+    }
 }
