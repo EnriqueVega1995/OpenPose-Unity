@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class colliderr : MonoBehaviour
+public class collider : MonoBehaviour
 {
-    float x,y,z;
     Vector3 Rango_obj1;
     Vector3 Rango_obj2;
     Vector3 Rango_obj3;
-    Vector3 pos;
     public Text puntos;
-    public int total_puntos = 0;
+    int total_puntos = 0;
     public GameObject obj_1;
     public GameObject obj_2;
     public GameObject obj_3;
@@ -45,7 +43,6 @@ public class colliderr : MonoBehaviour
             //Destroy(this.gameObject,1);
             //cubo_1.transform.position=pos;
             this.gameObject.tag="obj";   
-            
             Renderer rend = this.gameObject.GetComponent<Renderer>();
             rend.material.SetColor("_EmissionColor", Color.white);  
         }
