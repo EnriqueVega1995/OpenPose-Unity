@@ -13,6 +13,7 @@ public class collider : MonoBehaviour
     public GameObject obj_1;
     public GameObject obj_2;
     public GameObject obj_3;
+    public static colliderr ins = null;
     //public Transform cubo_1; 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,6 @@ public class collider : MonoBehaviour
             obj_2.gameObject.transform.position = Rango_obj2;
             obj_3.gameObject.transform.position = Rango_obj3;
             total_puntos ++;
-            Debug.Log(total_puntos);
         }
         //cubo_1.transform.Rotate(0,1f,0);
     }
@@ -53,5 +53,8 @@ public class collider : MonoBehaviour
             Renderer rend = this.gameObject.GetComponent<Renderer>();
             rend.material.SetColor("_EmissionColor", Color.black); 
         }
+    }
+    public void points(){
+        total_puntos = 0;
     }
 }

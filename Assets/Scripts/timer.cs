@@ -11,17 +11,16 @@ public class timer : MonoBehaviour
     public GameObject obj_2;
     public GameObject obj_3;
     private float timeRemaining;
-    private const float timerMax = 5f;
+    private const float timerMax = 3f;
     public Slider slider;
     // Start is called before the first frame update
     void Start()
     {
-        timeRemaining = timerMax;
+        //timeRemaining = timerMax;
     }
     // Update is called once per frame
     void Update()
     {
-        
         slider.value = CalculateSliderValue();
         if(Input.GetKey(KeyCode.Space)){
             timeRemaining = timerMax;
@@ -29,6 +28,7 @@ public class timer : MonoBehaviour
             obj_1.SetActive(true);
             obj_2.SetActive(true);
             obj_3.SetActive(true);
+            //colliderr scorePointsScript =  scorePointsScript.GetComponent<colliderr>();
             //SceneManager.LoadScene("Test");
             
         }
@@ -50,5 +50,10 @@ public class timer : MonoBehaviour
     }
     void hardRestartGame() {
      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void ExitGame(){
+        Application.Quit();
+        Debug.Log("Exit");
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }

@@ -17,5 +17,9 @@ public class scene : MonoBehaviour
          if(Input.GetKey(KeyCode.Space)){
             SceneManager.LoadScene("Demo");
         }
+        
+    }
+    public void LoadGame(){
+        SceneManager.LoadScene("Demo"); 
     }
 }
