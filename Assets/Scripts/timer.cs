@@ -10,8 +10,8 @@ public class timer : MonoBehaviour
     public GameObject obj_1;
     public GameObject obj_2;
     public GameObject obj_3;
-    private float timeRemaining;
-    private const float timerMax = 3f;
+    public float timeRemaining;
+    private const float timerMax = 10f;
     public Slider slider;
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,7 @@ public class timer : MonoBehaviour
             
         }else if(timeRemaining > 0){
             timeRemaining -= Time.deltaTime;
-            Debug.Log(timeRemaining);
+            //Debug.Log(timeRemaining);
             
         }
     }

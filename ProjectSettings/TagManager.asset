@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - obj
+  - timer
   layers:
   - Default
   - TransparentFX

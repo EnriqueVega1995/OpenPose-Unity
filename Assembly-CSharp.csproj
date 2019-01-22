@@ -65,6 +65,7 @@
      <Compile Include="Assets\OpenPose\Modules\Scripts\OPWrapper.cs" />
      <Compile Include="Assets\Scripts\collider.cs" />
      <Compile Include="Assets\Scripts\colliderr.cs" />
+     <Compile Include="Assets\Scripts\gametwister.cs" />
      <Compile Include="Assets\Scripts\scene.cs" />
      <Compile Include="Assets\Scripts\timer.cs" />
      <Compile Include="Assets\Scripts\verificacion.cs" />

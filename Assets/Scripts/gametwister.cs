@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class collider : MonoBehaviour
+public class gametwister : MonoBehaviour
 {
     Vector3 Rango_obj1;
     Vector3 Rango_obj2;
     Vector3 Rango_obj3;
     public Text puntos;
-    private int total_puntos = 0;
+    public int total_puntos = 0;
     public GameObject obj_1;
     public GameObject obj_2;
     public GameObject obj_3;
-    public static colliderr ins = null;
+    public timer tim;
+
+
     //public Transform cubo_1; 
     // Start is called before the first frame update
     void Start()
@@ -32,10 +34,15 @@ public class collider : MonoBehaviour
             obj_2.gameObject.transform.position = Rango_obj2;
             obj_3.gameObject.transform.position = Rango_obj3;
             total_puntos ++;
+            Debug.Log(total_puntos);
+        }
+        if(tim.timeRemaining <= 0){
+            total_puntos = 0;
+            Debug.Log(total_puntos + " Fin del juego");
         }
         //cubo_1.transform.Rotate(0,1f,0);
     }
-    void OnTriggerStay (Collider other){
+    void OnTriggerEnter (Collider other){
 		//Debug.Log ("dentro delcollider");
 		if (other.gameObject.tag == "Player") {
             //Debug.Log("Colider del Cubo");

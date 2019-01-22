@@ -47,11 +47,12 @@ namespace OpenPose.Example {
         }
 
         // Bg image
-        public bool renderBgImg = false;
+        public bool renderBgImg = true;
         public void ToggleRenderBgImg(){
             renderBgImg = !renderBgImg;
             OPWrapper.OPEnableImageOutput(renderBgImg);
             imageRenderer.FadeInOut(renderBgImg);
+            Debug.Log("Imagen");
         }
 
         // Number of people
@@ -65,6 +66,7 @@ namespace OpenPose.Example {
         private float lastFrameTime = -1f;
 
         private void Start() {
+            ToggleRenderBgImg();
             // Register callbacks
             OPWrapper.OPRegisterCallbacks();
             // Enable OpenPose run multi-thread (default true)
