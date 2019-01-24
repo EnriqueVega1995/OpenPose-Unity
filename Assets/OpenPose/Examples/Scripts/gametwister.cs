@@ -15,21 +15,24 @@ public class gametwister : MonoBehaviour
     public GameObject obj_3;
     public timer tim;
 
-
+    ParticleSystem ps;
     //public Transform cubo_1;
     // Start is called before the first frame update
     void Start()
     {
+        ps = GetComponentInChildren<ParticleSystem>();
         //cubo_1 = GetComponent<Transform>();
         //transform.position = pos;
     }
     void Update()
     {
+        
         Rango_obj1 = new Vector3(Random.Range(73,480),Random.Range(0,240),0);
         Rango_obj2 = new Vector3(Random.Range(-480,-73),Random.Range(240,0),0);
         Rango_obj3 = new Vector3(Random.Range(-480,480),Random.Range(-70,-277),0);
         puntos.text = "Puntos: " + total_puntos;
         if(obj_1.gameObject.tag=="obj" && obj_2.gameObject.tag=="obj" && obj_3.gameObject.tag=="obj"){
+            ps.Play();
             obj_1.gameObject.transform.position = Rango_obj1;
             obj_2.gameObject.transform.position = Rango_obj2;
             obj_3.gameObject.transform.position = Rango_obj3;
@@ -39,6 +42,9 @@ public class gametwister : MonoBehaviour
         if(tim.timeRemaining <= 0){
             total_puntos = 0;
             Debug.Log(total_puntos + " Fin del juego");
+        }
+        if(Input.GetKeyDown(KeyCode.E)){
+            ps.Play();
         }
         //cubo_1.transform.Rotate(0,1f,0);
     }

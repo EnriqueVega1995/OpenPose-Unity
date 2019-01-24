@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\OpenPose\Examples\Scripts\force.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\gametwister.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\HumanController2D.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\ImageRenderer.cs" />
