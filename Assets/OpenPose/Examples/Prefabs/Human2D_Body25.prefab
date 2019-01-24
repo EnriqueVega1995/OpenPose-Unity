@@ -7211,6 +7211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202d02d63c7a5cb4b9387827db6feef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  box: {fileID: 5477028404068221802}
   PoseKeypointsCount: 25
   HandKeypointsCount: 21
   FaceKeypointsCount: 70

@@ -11,7 +11,7 @@ public class timer : MonoBehaviour
     public GameObject obj_2;
     public GameObject obj_3;
     public float timeRemaining;
-    private const float timerMax = 10f;
+    private const float timerMax = 20f;
     public Slider slider;
     // Start is called before the first frame update
     void Start()

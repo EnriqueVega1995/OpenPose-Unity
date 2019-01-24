@@ -11,7 +11,8 @@ namespace OpenPose.Example {
      * Active: whether the score of that keypoint is larger than ScoreThres
      */
     public class HumanController2D : MonoBehaviour {
-         
+
+        public BoxCollider box; 
         public int PoseKeypointsCount = 25;
         public int HandKeypointsCount = 21;
         public int FaceKeypointsCount = 70;
@@ -37,9 +38,15 @@ namespace OpenPose.Example {
         private void DrawBody(ref OPDatum datum, int bodyIndex, float scoreThres){
             if (datum.poseKeypoints == null || bodyIndex >= datum.poseKeypoints.GetSize(0)) {
                 PoseParent.gameObject.SetActive(false);
+                box.GetComponentInChildren<BoxCollider>().enabled = false;
                 return;
             } else {
                 PoseParent.gameObject.SetActive(true);
+                box.GetComponentInChildren<BoxCollider>().enabled = true;
+            }
+            if(Input.GetKey(KeyCode.E)){
+                Debug.Log("asdfdfgasdfasdfasdfasdfasdfasdfasdf");
+                //box.GetComponentInChildren<BoxCollider>().enabled = false;
             }
             // Pose 
             for (int part = 0; part < poseJoints.Count; part++) {
@@ -64,10 +71,12 @@ namespace OpenPose.Example {
                 LHandParent.gameObject.SetActive(false);
             } else {
                 LHandParent.gameObject.SetActive(true);
+                box.GetComponentInChildren<BoxCollider>().enabled = true;
                 for (int part = 0; part < lHandJoints.Count; part++) {
                     // Joints overflow
                     if (part >= datum.handKeypoints.left.GetSize(1)) {
                         lHandJoints[part].gameObject.SetActive(false);
+                        box.GetComponentInChildren<BoxCollider>().enabled = false;
                         continue;
                     }
                     // Compare score

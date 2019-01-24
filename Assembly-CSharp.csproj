@@ -53,22 +53,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\OpenPose\Examples\Scripts\gametwister.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\HumanController2D.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\ImageRenderer.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\OpenPoseUserScript.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\RenderHeadCircle.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\RenderKeypoints.cs" />
+     <Compile Include="Assets\OpenPose\Examples\Scripts\scene.cs" />
+     <Compile Include="Assets\OpenPose\Examples\Scripts\timer.cs" />
+     <Compile Include="Assets\OpenPose\Examples\Scripts\verificacion.cs" />
      <Compile Include="Assets\OpenPose\Modules\Scripts\OPBind.cs" />
      <Compile Include="Assets\OpenPose\Modules\Scripts\OPDatum.cs" />
      <Compile Include="Assets\OpenPose\Modules\Scripts\OPEnums.cs" />
      <Compile Include="Assets\OpenPose\Modules\Scripts\OPOutputParser.cs" />
      <Compile Include="Assets\OpenPose\Modules\Scripts\OPWrapper.cs" />
-     <Compile Include="Assets\Scripts\collider.cs" />
-     <Compile Include="Assets\Scripts\colliderr.cs" />
-     <Compile Include="Assets\Scripts\gametwister.cs" />
-     <Compile Include="Assets\Scripts\scene.cs" />
-     <Compile Include="Assets\Scripts\timer.cs" />
-     <Compile Include="Assets\Scripts\verificacion.cs" />
      <Compile Include="Assets\VideoPlayerControl\VideoProgressBar.cs" />
      <None Include="Assets\OpenPose\Examples\Render\RGB_2_BGR_UI_Shader.shader" />
      <None Include="Assets\StreamingAssets\models\face\haarcascade_frontalface_alt.xml" />

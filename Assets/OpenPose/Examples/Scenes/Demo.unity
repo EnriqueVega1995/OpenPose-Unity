@@ -1023,11 +1023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8733611b04dbe409ee8b2256bbe5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntos: {fileID: 0}
-  total_puntos: 0
-  obj_1: {fileID: 456537074}
-  obj_2: {fileID: 399372172}
-  obj_3: {fileID: 0}
 --- !u!65 &399372176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1514,11 +1509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8733611b04dbe409ee8b2256bbe5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntos: {fileID: 0}
-  total_puntos: 0
-  obj_1: {fileID: 456537074}
-  obj_2: {fileID: 399372172}
-  obj_3: {fileID: 0}
 --- !u!65 &456537078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3606,6 +3596,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5477028404068221802, guid: 831a1ca4df7dbba40a51933985fa4083,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4371787940657162387, guid: 831a1ca4df7dbba40a51933985fa4083,
         type: 3}
       propertyPath: m_IsKinematic
@@ -3640,6 +3635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845060933446792854, guid: 831a1ca4df7dbba40a51933985fa4083,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2587329205154985241, guid: 831a1ca4df7dbba40a51933985fa4083,
         type: 3}
@@ -3809,6 +3809,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114006422057181508, guid: 831a1ca4df7dbba40a51933985fa4083,
+        type: 3}
+      propertyPath: box
+      value: 
+      objectReference: {fileID: 1574466689}
     m_RemovedComponents:
     - {fileID: 6426402064945278273, guid: 831a1ca4df7dbba40a51933985fa4083, type: 3}
     - {fileID: 5387745445198992622, guid: 831a1ca4df7dbba40a51933985fa4083, type: 3}
@@ -5697,6 +5702,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!65 &1574466689 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5477028404068221802, guid: 831a1ca4df7dbba40a51933985fa4083,
+    type: 3}
+  m_PrefabInstance: {fileID: 1052494447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1592126573
 GameObject:
   m_ObjectHideFlags: 0
@@ -6499,7 +6510,7 @@ MonoBehaviour:
   imageRenderer: {fileID: 1675082012}
   fpsText: {fileID: 360185006}
   peopleText: {fileID: 940128901}
-  inputType: 4
+  inputType: 5
   producerString: -1
   maxPeople: -1
   renderThreshold: 0.05
@@ -7552,6 +7563,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 38597013189333564, guid: 4b72de276f1171b419df3319672958bd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Respawn
       objectReference: {fileID: 0}
     - target: {fileID: 38597013189333537, guid: 4b72de276f1171b419df3319672958bd,
         type: 3}

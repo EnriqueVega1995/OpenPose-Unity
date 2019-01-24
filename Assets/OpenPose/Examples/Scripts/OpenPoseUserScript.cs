@@ -66,6 +66,7 @@ namespace OpenPose.Example {
         private float lastFrameTime = -1f;
 
         private void Start() {
+            //add
             ToggleRenderBgImg();
             // Register callbacks
             OPWrapper.OPRegisterCallbacks();
