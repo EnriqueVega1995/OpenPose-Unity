@@ -14,6 +14,7 @@ public class gametwister : MonoBehaviour
     public GameObject obj_2;
     public GameObject obj_3;
     public timer tim;
+    public OpenPose.Example.HumanController2D open;
 
     ParticleSystem ps;
     //public Transform cubo_1;
@@ -26,7 +27,10 @@ public class gametwister : MonoBehaviour
     }
     void Update()
     {
-        
+        if(open.box.gameObject.tag=="Finish"){
+            Renderer rend = this.gameObject.GetComponent<Renderer>();
+            rend.material.SetColor("_EmissionColor", Color.black);
+        }
         Rango_obj1 = new Vector3(Random.Range(73,480),Random.Range(0,240),0);
         Rango_obj2 = new Vector3(Random.Range(-480,-73),Random.Range(240,0),0);
         Rango_obj3 = new Vector3(Random.Range(-480,480),Random.Range(-70,-277),0);
@@ -59,7 +63,9 @@ public class gametwister : MonoBehaviour
             Renderer rend = this.gameObject.GetComponent<Renderer>();
             rend.material.SetColor("_EmissionColor", Color.white);
         }
+        
 	}
+   
     void OnTriggerExit(Collider other){
         if(other.gameObject.tag=="Player"){
             this.gameObject.tag="Respawn";

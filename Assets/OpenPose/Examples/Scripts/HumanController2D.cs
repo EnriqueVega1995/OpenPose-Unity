@@ -12,11 +12,11 @@ namespace OpenPose.Example {
      */
     public class HumanController2D : MonoBehaviour {
 
-        public BoxCollider box; 
+        public GameObject box; 
         public int PoseKeypointsCount = 25;
         public int HandKeypointsCount = 21;
         public int FaceKeypointsCount = 70;
-
+        public gametwister gt;
         [SerializeField] RectTransform PoseParent;
         [SerializeField] RectTransform LHandParent;
         [SerializeField] RectTransform RHandParent;
@@ -28,7 +28,6 @@ namespace OpenPose.Example {
         private List<RectTransform> lHandJoints = new List<RectTransform>();
         private List<RectTransform> rHandJoints = new List<RectTransform>();
         private List<RectTransform> faceJoints = new List<RectTransform>();
-
         public void DrawHuman(ref OPDatum datum, int bodyIndex, float scoreThres = 0){
             DrawBody(ref datum, bodyIndex, scoreThres);
             DrawHand(ref datum, bodyIndex, scoreThres);
@@ -39,29 +38,45 @@ namespace OpenPose.Example {
             if (datum.poseKeypoints == null || bodyIndex >= datum.poseKeypoints.GetSize(0)) {
                 PoseParent.gameObject.SetActive(false);
                 box.GetComponentInChildren<BoxCollider>().enabled = false;
+                gt.obj_1.tag="Respawn";
+                PoseParent.tag="Finish";
+                box.gameObject.tag="Finish";
                 return;
             } else {
                 PoseParent.gameObject.SetActive(true);
                 box.GetComponentInChildren<BoxCollider>().enabled = true;
+                //Debug.Log("Test!!!!!!!!!!!!");
             }
             if(Input.GetKey(KeyCode.E)){
-                Debug.Log("asdfdfgasdfasdfasdfasdfasdfasdfasdf");
+                // Debug.Log("asdfdfgasdfasdfasdfasdfasdfasdfasdf");
+                // gt.obj_1.tag="Finish";
+                // box.center = box.center + new Vector3(800, 0, 0);
                 //box.GetComponentInChildren<BoxCollider>().enabled = false;
+                PoseParent.tag="Finish";
+                box.gameObject.tag="Finish";
             }
+            if(datum.poseKeypoints != null){
+                Debug.Log("Testtttttttttttttttttttttttt");
+            } 
             // Pose 
             for (int part = 0; part < poseJoints.Count; part++) {
                 // Joints overflow
                 if (part >= datum.poseKeypoints.GetSize(1)) {
                     poseJoints[part].gameObject.SetActive(false);
                     continue;
+                }else{
+                    //gt.obj_1.tag="Finish";
+                    PoseParent.tag="Respawn";
                 }
                 // Compare score
                 if (datum.poseKeypoints.Get(bodyIndex, part, 2) <= scoreThres) {
                     poseJoints[part].gameObject.SetActive(false);
+                    //gt.obj_1.tag="Respawn";
                 } else {
                     poseJoints[part].gameObject.SetActive(true);
                     Vector3 pos = new Vector3(datum.poseKeypoints.Get(bodyIndex, part, 0), datum.poseKeypoints.Get(bodyIndex, part, 1), 0f);
                     poseJoints[part].localPosition = pos;
+                    
                 }
             }
         }
