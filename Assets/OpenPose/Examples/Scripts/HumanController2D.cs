@@ -38,13 +38,13 @@ namespace OpenPose.Example {
             if (datum.poseKeypoints == null || bodyIndex >= datum.poseKeypoints.GetSize(0)) {
                 PoseParent.gameObject.SetActive(false);
                 box.GetComponentInChildren<BoxCollider>().enabled = false;
-                gt.obj_1.tag="Respawn";
-                PoseParent.tag="Finish";
-                box.gameObject.tag="Finish";
+                // gt.obj_1.tag="Respawn";
+                // PoseParent.tag="Finish";
+                // box.gameObject.tag="Finish";
                 return;
             } else {
                 PoseParent.gameObject.SetActive(true);
-                box.GetComponentInChildren<BoxCollider>().enabled = true;
+                //box.GetComponentInChildren<BoxCollider>().enabled = true;
                 //Debug.Log("Test!!!!!!!!!!!!");
             }
             if(Input.GetKey(KeyCode.E)){
@@ -66,7 +66,7 @@ namespace OpenPose.Example {
                     continue;
                 }else{
                     //gt.obj_1.tag="Finish";
-                    PoseParent.tag="Respawn";
+                    //PoseParent.tag="Respawn";
                 }
                 // Compare score
                 if (datum.poseKeypoints.Get(bodyIndex, part, 2) <= scoreThres) {

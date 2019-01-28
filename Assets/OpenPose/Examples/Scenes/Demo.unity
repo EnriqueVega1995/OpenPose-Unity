@@ -1738,6 +1738,15 @@ MonoBehaviour:
   obj_3: {fileID: 1648253998}
   tim: {fileID: 1167863204}
   open: {fileID: 1811759767}
+  rend_1: {fileID: 494671134}
+  rend_2: {fileID: 1595728325}
+  rend_3: {fileID: 1648254001}
+--- !u!23 &494671134 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2219706777204344422, guid: 7e0d345ea247998458de376f16be8b54,
+    type: 3}
+  m_PrefabInstance: {fileID: 2219706777421140859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &494671136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2219706777204344420, guid: 7e0d345ea247998458de376f16be8b54,
@@ -6191,6 +6200,15 @@ MonoBehaviour:
   obj_3: {fileID: 1648253998}
   tim: {fileID: 1167863204}
   open: {fileID: 1811759767}
+  rend_1: {fileID: 494671134}
+  rend_2: {fileID: 1595728325}
+  rend_3: {fileID: 1648254001}
+--- !u!23 &1595728325 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3775715545125659666, guid: e4e06e1adf556e74e9a8416001f17d68,
+    type: 3}
+  m_PrefabInstance: {fileID: 3775715546721306071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1595728327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3775715545125659664, guid: e4e06e1adf556e74e9a8416001f17d68,
@@ -6222,6 +6240,15 @@ MonoBehaviour:
   obj_3: {fileID: 1648253998}
   tim: {fileID: 1167863204}
   open: {fileID: 1811759767}
+  rend_1: {fileID: 494671134}
+  rend_2: {fileID: 1595728325}
+  rend_3: {fileID: 1648254001}
+--- !u!23 &1648254001 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 38597013189333539, guid: 4b72de276f1171b419df3319672958bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 38597011615043090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1648254003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 38597013189333537, guid: 4b72de276f1171b419df3319672958bd,
