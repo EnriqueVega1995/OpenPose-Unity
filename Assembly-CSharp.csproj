@@ -54,11 +54,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\OpenPose\Examples\Scripts\boxwrist.cs" />
-     <Compile Include="Assets\OpenPose\Examples\Scripts\force.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\gametwister.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\HumanController2D.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\ImageRenderer.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\OpenPoseUserScript.cs" />
+     <Compile Include="Assets\OpenPose\Examples\Scripts\play2d.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\RenderHeadCircle.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\RenderKeypoints.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\scene.cs" />

@@ -7215,6 +7215,7 @@ MonoBehaviour:
   PoseKeypointsCount: 25
   HandKeypointsCount: 21
   FaceKeypointsCount: 70
+  gt: {fileID: 0}
   PoseParent: {fileID: 224560219641090672}
   LHandParent: {fileID: 224361909899959206}
   RHandParent: {fileID: 224745229846397596}
@@ -11563,6 +11564,7 @@ GameObject:
   - component: {fileID: 224420749253034076}
   - component: {fileID: 114763193415754086}
   - component: {fileID: 120227389269670952}
+  - component: {fileID: 4187668506502234106}
   m_Layer: 5
   m_Name: LLowArm
   m_TagString: Untagged
@@ -11698,6 +11700,32 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!61 &4187668506502234106
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457422709599398}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+  m_EdgeRadius: 0
 --- !u!1 &1457919146057302
 GameObject:
   m_ObjectHideFlags: 0
@@ -16203,6 +16231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224631469632508340}
+  - component: {fileID: 8457674028604653971}
   m_Layer: 5
   m_Name: 6_LElbow
   m_TagString: Player
@@ -16229,6 +16258,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &8457674028604653971
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621001641479156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1626683387064744
 GameObject:
   m_ObjectHideFlags: 0

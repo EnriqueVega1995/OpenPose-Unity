@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class timer : MonoBehaviour
 {
     public GameObject gameover;
+    public GameObject play_2d;
     public GameObject obj_1;
     public GameObject obj_2;
     public GameObject obj_3;
     public float timeRemaining;
-    private const float timerMax = 30f;
+    private const float timerMax = 5f;
     public Slider slider;
+    public play2d play;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,10 @@ public class timer : MonoBehaviour
             obj_1.SetActive(false);
             obj_2.SetActive(false);
             obj_3.SetActive(false);
-            
+            play_2d.SetActive(true);
         }else if(timeRemaining > 0){
             timeRemaining -= Time.deltaTime;
             //Debug.Log(timeRemaining);
-            
         }
     }
     float CalculateSliderValue(){
@@ -55,5 +56,19 @@ public class timer : MonoBehaviour
         Application.Quit();
         Debug.Log("Exit");
         UnityEditor.EditorApplication.isPlaying = false;
+    }
+    public void PlayGame(){
+        timeRemaining = timerMax;
+        gameover.SetActive(false);
+        obj_1.SetActive(true);
+        obj_2.SetActive(true);
+        obj_3.SetActive(true);
+    }
+    public void GameOver(){
+        timeRemaining = 0;
+        gameover.SetActive(true);
+        obj_1.SetActive(false);
+        obj_2.SetActive(false);
+        obj_3.SetActive(false);
     }
 }
