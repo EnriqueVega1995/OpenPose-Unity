@@ -37,7 +37,7 @@ namespace OpenPose.Example {
         private void DrawBody(ref OPDatum datum, int bodyIndex, float scoreThres){
             if (datum.poseKeypoints == null || bodyIndex >= datum.poseKeypoints.GetSize(0)) {
                 PoseParent.gameObject.SetActive(false);
-                box.GetComponentInChildren<BoxCollider>().enabled = false;
+                //box.GetComponentInChildren<BoxCollider>().enabled = false;
                 // gt.obj_1.tag="Respawn";
                 // PoseParent.tag="Finish";
                 // box.gameObject.tag="Finish";
@@ -52,11 +52,11 @@ namespace OpenPose.Example {
                 // gt.obj_1.tag="Finish";
                 // box.center = box.center + new Vector3(800, 0, 0);
                 //box.GetComponentInChildren<BoxCollider>().enabled = false;
-                PoseParent.tag="Finish";
-                box.gameObject.tag="Finish";
+                // PoseParent.tag="Finish";
+                // box.gameObject.tag="Finish";
             }
             if(datum.poseKeypoints != null){
-                Debug.Log("Testtttttttttttttttttttttttt");
+                // Debug.Log("Testtttttttttttttttttttttttt");
             } 
             // Pose 
             for (int part = 0; part < poseJoints.Count; part++) {

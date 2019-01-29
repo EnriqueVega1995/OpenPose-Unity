@@ -9,7 +9,7 @@ public class gametwister : MonoBehaviour
     Vector3 Rango_obj2;
     Vector3 Rango_obj3;
     public Text puntos;
-    public int total_puntos = 0;
+    int total_puntos = 0;
     public GameObject obj_1;
     public GameObject obj_2;
     public GameObject obj_3;
@@ -36,14 +36,30 @@ public class gametwister : MonoBehaviour
         if(open.box.gameObject.tag=="Finish"){
             Renderer rend = this.gameObject.GetComponent<Renderer>();
             rend.material.SetColor("_EmissionColor", Color.black);
-        }
+        } 
         Rango_obj1 = new Vector3(Random.Range(73,480),Random.Range(0,240),0);
         Rango_obj2 = new Vector3(Random.Range(-480,-73),Random.Range(240,0),0);
         Rango_obj3 = new Vector3(Random.Range(-480,480),Random.Range(-70,-277),0);
-        puntos.text = "Puntos: " + total_puntos;
+        
+        
         if(obj_1.gameObject.tag=="obj" && obj_2.gameObject.tag=="obj" && obj_3.gameObject.tag=="obj"){
-            Twister();
+            //this.ps.Play();
+            total_puntos ++;
+            Debug.Log(total_puntos);
+            obj_1.gameObject.transform.position = Rango_obj1;
+            obj_2.gameObject.transform.position = Rango_obj2;
+            obj_3.gameObject.transform.position = Rango_obj3;
+            obj_1.gameObject.tag="Respawn";
+            obj_2.gameObject.tag="Respawn";
+            obj_3.gameObject.tag="Respawn";
+            rend_1.material.SetColor("_EmissionColor", Color.black);
+            rend_2.material.SetColor("_EmissionColor", Color.black);
+            rend_3.material.SetColor("_EmissionColor", Color.black);
+            // Renderer rend = this.gameObject.GetComponent<Renderer>();
+            // rend.material.SetColor("_EmissionColor", Color.black);
+            puntos.text = "Puntos: " + total_puntos;
         }
+        
         if(tim.timeRemaining <= 0){
             total_puntos = 0;
             Debug.Log(total_puntos + " Fin del juego");
@@ -53,11 +69,11 @@ public class gametwister : MonoBehaviour
         }
         //cubo_1.transform.Rotate(0,1f,0);
     }
-    void OnTriggerEnter (Collider other){
+    void OnTriggerEnter(Collider other){
 		//Debug.Log ("dentro delcollider");
 		if (other.gameObject.tag == "Player"){
             //Debug.Log("Colider del Cubo");
-            //this.transform.localScale += new Vector3(-150,-150,-150)*Time.deltaTime;
+            // this.transform.localScale += new Vector3(200*2*Time.deltaTime,0,0);
             //Destroy(this.gameObject,1);
             //cubo_1.transform.position=pos;
             this.gameObject.tag="obj";
@@ -71,25 +87,22 @@ public class gametwister : MonoBehaviour
             Renderer rend = this.gameObject.GetComponent<Renderer>();
             rend.material.SetColor("_EmissionColor",Color.black);
         }
-    }    
-    public void Points(){
-        total_puntos = 0;
     }
     public void Twister(){
-        ps.Play();
-            obj_1.gameObject.transform.position = Rango_obj1;
-            obj_2.gameObject.transform.position = Rango_obj2;
-            obj_3.gameObject.transform.position = Rango_obj3;
-            obj_1.gameObject.tag="Respawn";
-            obj_2.gameObject.tag="Respawn";
-            obj_3.gameObject.tag="Respawn";
-            rend_1.material.SetColor("_EmissionColor", Color.black);
-            rend_2.material.SetColor("_EmissionColor", Color.black);
-            rend_3.material.SetColor("_EmissionColor", Color.black);
-            // Renderer rend = this.gameObject.GetComponent<Renderer>();
-            // rend.material.SetColor("_EmissionColor", Color.black);
-            total_puntos ++;
-            Debug.Log(total_puntos);
+        this.ps.Play();
+        obj_1.gameObject.transform.position = Rango_obj1;
+        obj_2.gameObject.transform.position = Rango_obj2;
+        obj_3.gameObject.transform.position = Rango_obj3;
+        obj_1.gameObject.tag="Respawn";
+        obj_2.gameObject.tag="Respawn";
+        obj_3.gameObject.tag="Respawn";
+        rend_1.material.SetColor("_EmissionColor", Color.black);
+        rend_2.material.SetColor("_EmissionColor", Color.black);
+        rend_3.material.SetColor("_EmissionColor", Color.black);
+        // Renderer rend = this.gameObject.GetComponent<Renderer>();
+        // rend.material.SetColor("_EmissionColor", Color.black);
+        // total_puntos ++;
+        // Debug.Log(total_puntos);
     }
 }
  

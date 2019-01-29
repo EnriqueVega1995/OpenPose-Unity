@@ -8221,6 +8221,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Respawn
       objectReference: {fileID: 0}
+    - target: {fileID: 2219706777204344422, guid: 7e0d345ea247998458de376f16be8b54,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219706777204344420, guid: 7e0d345ea247998458de376f16be8b54,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8275,11 +8280,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2219706777204344422, guid: 7e0d345ea247998458de376f16be8b54,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219706777204344423, guid: 7e0d345ea247998458de376f16be8b54,
         type: 3}
@@ -8515,6 +8515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.772694
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123383557457792612, guid: 776c06109b8a88f47b7802cf10bdac32,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 776c06109b8a88f47b7802cf10bdac32, type: 3}
