@@ -76,7 +76,6 @@ namespace OpenPose.Example {
                     poseJoints[part].gameObject.SetActive(true);
                     Vector3 pos = new Vector3(datum.poseKeypoints.Get(bodyIndex, part, 0), datum.poseKeypoints.Get(bodyIndex, part, 1), 0f);
                     poseJoints[part].localPosition = pos;
-                    
                 }
             }
         }
@@ -86,12 +85,12 @@ namespace OpenPose.Example {
                 LHandParent.gameObject.SetActive(false);
             } else {
                 LHandParent.gameObject.SetActive(true);
-                box.GetComponentInChildren<BoxCollider>().enabled = true;
+                //box.GetComponentInChildren<BoxCollider>().enabled = true;
                 for (int part = 0; part < lHandJoints.Count; part++) {
                     // Joints overflow
                     if (part >= datum.handKeypoints.left.GetSize(1)) {
                         lHandJoints[part].gameObject.SetActive(false);
-                        box.GetComponentInChildren<BoxCollider>().enabled = false;
+                        //box.GetComponentInChildren<BoxCollider>().enabled = false;
                         continue;
                     }
                     // Compare score

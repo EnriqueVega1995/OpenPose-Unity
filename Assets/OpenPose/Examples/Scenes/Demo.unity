@@ -4188,6 +4188,11 @@ PrefabInstance:
       propertyPath: gt
       value: 
       objectReference: {fileID: 494671132}
+    - target: {fileID: 120516806645894332, guid: 831a1ca4df7dbba40a51933985fa4083,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 120227389269670952, guid: 831a1ca4df7dbba40a51933985fa4083,
         type: 3}
       propertyPath: m_Enabled
@@ -8888,6 +8893,21 @@ PrefabInstance:
       propertyPath: play
       value: 
       objectReference: {fileID: 1948954995}
+    - target: {fileID: 7476137198201294391, guid: e202a0985100d7f4b960719e69f067ae,
+        type: 3}
+      propertyPath: rend_1
+      value: 
+      objectReference: {fileID: 494671134}
+    - target: {fileID: 7476137198201294391, guid: e202a0985100d7f4b960719e69f067ae,
+        type: 3}
+      propertyPath: rend_2
+      value: 
+      objectReference: {fileID: 1595728325}
+    - target: {fileID: 7476137198201294391, guid: e202a0985100d7f4b960719e69f067ae,
+        type: 3}
+      propertyPath: rend_3
+      value: 
+      objectReference: {fileID: 1648254001}
     - target: {fileID: 7476137198201294388, guid: e202a0985100d7f4b960719e69f067ae,
         type: 3}
       propertyPath: m_LocalPosition.x

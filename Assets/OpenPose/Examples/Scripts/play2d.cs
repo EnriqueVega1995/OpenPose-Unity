@@ -36,7 +36,6 @@ public class play2d : MonoBehaviour
             Debug.Log("Tocando play");
             //timeRe = timerMax;
             slider_play.value -= 0.5f*Time.deltaTime;
-            
         }
     }
     void OnTriggerExit(Collider other){

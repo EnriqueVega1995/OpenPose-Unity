@@ -11,10 +11,14 @@ public class timer : MonoBehaviour
     public GameObject obj_1;
     public GameObject obj_2;
     public GameObject obj_3;
+    public Renderer rend_1;
+    public Renderer rend_2;
+    public Renderer rend_3;
     public float timeRemaining;
     private const float timerMax = 5f;
     public Slider slider;
     public play2d play;
+    //public gametwister gt;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +35,7 @@ public class timer : MonoBehaviour
             obj_2.SetActive(true);
             obj_3.SetActive(true);
             //colliderr scorePointsScript =  scorePointsScript.GetComponent<colliderr>();
-            //SceneManager.LoadScene("Test");
-            
+            //SceneManager.LoadScene("Test");   
         }
         if(timeRemaining <= 0){
             timeRemaining = 0;
@@ -59,10 +62,18 @@ public class timer : MonoBehaviour
     }
     public void PlayGame(){
         timeRemaining = timerMax;
+        rend_1.material.SetColor("_EmissionColor", Color.black);
+        rend_2.material.SetColor("_EmissionColor", Color.black);
+        rend_3.material.SetColor("_EmissionColor", Color.black);
+        obj_1.gameObject.tag="Respawn";
+        obj_2.gameObject.tag="Respawn";
+        obj_3.gameObject.tag="Respawn";
         gameover.SetActive(false);
         obj_1.SetActive(true);
         obj_2.SetActive(true);
         obj_3.SetActive(true);
+        
+        //gt.rend_1.material.SetColor("_EmissionColor", Color.black);
     }
     public void GameOver(){
         timeRemaining = 0;

@@ -18,8 +18,8 @@ public class gametwister : MonoBehaviour
     public Renderer rend_1;
     public Renderer rend_2;
     public Renderer rend_3;
-
     ParticleSystem ps;
+    
     //public Transform cubo_1;
     // Start is called before the first frame update
     void Start()
@@ -40,8 +40,6 @@ public class gametwister : MonoBehaviour
         Rango_obj1 = new Vector3(Random.Range(73,480),Random.Range(0,240),0);
         Rango_obj2 = new Vector3(Random.Range(-480,-73),Random.Range(240,0),0);
         Rango_obj3 = new Vector3(Random.Range(-480,480),Random.Range(-70,-277),0);
-        
-        
         if(obj_1.gameObject.tag=="obj" && obj_2.gameObject.tag=="obj" && obj_3.gameObject.tag=="obj"){
             //this.ps.Play();
             total_puntos ++;
@@ -59,7 +57,6 @@ public class gametwister : MonoBehaviour
             // rend.material.SetColor("_EmissionColor", Color.black);
             puntos.text = "Puntos: " + total_puntos;
         }
-        
         if(tim.timeRemaining <= 0){
             total_puntos = 0;
             Debug.Log(total_puntos + " Fin del juego");
