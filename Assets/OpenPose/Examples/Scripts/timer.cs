@@ -72,7 +72,6 @@ public class timer : MonoBehaviour
         obj_1.SetActive(true);
         obj_2.SetActive(true);
         obj_3.SetActive(true);
-        
         //gt.rend_1.material.SetColor("_EmissionColor", Color.black);
     }
     public void GameOver(){

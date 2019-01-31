@@ -41,21 +41,7 @@ public class gametwister : MonoBehaviour
         Rango_obj2 = new Vector3(Random.Range(-480,-73),Random.Range(240,0),0);
         Rango_obj3 = new Vector3(Random.Range(-480,480),Random.Range(-70,-277),0);
         if(obj_1.gameObject.tag=="obj" && obj_2.gameObject.tag=="obj" && obj_3.gameObject.tag=="obj"){
-            //this.ps.Play();
-            total_puntos ++;
-            Debug.Log(total_puntos);
-            obj_1.gameObject.transform.position = Rango_obj1;
-            obj_2.gameObject.transform.position = Rango_obj2;
-            obj_3.gameObject.transform.position = Rango_obj3;
-            obj_1.gameObject.tag="Respawn";
-            obj_2.gameObject.tag="Respawn";
-            obj_3.gameObject.tag="Respawn";
-            rend_1.material.SetColor("_EmissionColor", Color.black);
-            rend_2.material.SetColor("_EmissionColor", Color.black);
-            rend_3.material.SetColor("_EmissionColor", Color.black);
-            // Renderer rend = this.gameObject.GetComponent<Renderer>();
-            // rend.material.SetColor("_EmissionColor", Color.black);
-            puntos.text = "Puntos: " + total_puntos;
+            Twister();
         }
         if(tim.timeRemaining <= 0){
             total_puntos = 0;
@@ -100,6 +86,7 @@ public class gametwister : MonoBehaviour
         // rend.material.SetColor("_EmissionColor", Color.black);
         // total_puntos ++;
         // Debug.Log(total_puntos);
+        puntos.text = "Puntos: " + total_puntos;
     }
 }
  
