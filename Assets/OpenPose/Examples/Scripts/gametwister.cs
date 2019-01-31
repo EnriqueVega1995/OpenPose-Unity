@@ -19,8 +19,7 @@ public class gametwister : MonoBehaviour
     public Renderer rend_2;
     public Renderer rend_3;
     ParticleSystem ps;
-    
-    //public Transform cubo_1;
+    // public Transform cubo_1;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +27,8 @@ public class gametwister : MonoBehaviour
         rend_2.gameObject.GetComponent<Renderer>();
         rend_3.gameObject.GetComponent<Renderer>();
         ps = GetComponentInChildren<ParticleSystem>();
-        //cubo_1 = GetComponent<Transform>();
-        //transform.position = pos;
+        // cubo_1 = GetComponent<Transform>();
+        // transform.position = pos;
     }
     void Update()
     {
@@ -50,15 +49,15 @@ public class gametwister : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E)){
             ps.Play();
         }
-        //cubo_1.transform.Rotate(0,1f,0);
+        // cubo_1.transform.Rotate(0,1f,0);
     }
     void OnTriggerEnter(Collider other){
-		//Debug.Log ("dentro delcollider");
+		// Debug.Log ("dentro delcollider");
 		if (other.gameObject.tag == "Player"){
-            //Debug.Log("Colider del Cubo");
+            // Debug.Log("Colider del Cubo");
             // this.transform.localScale += new Vector3(200*2*Time.deltaTime,0,0);
-            //Destroy(this.gameObject,1);
-            //cubo_1.transform.position=pos;
+            // Destroy(this.gameObject,1);
+            // cubo_1.transform.position=pos;
             this.gameObject.tag="obj";
             Renderer rend = this.gameObject.GetComponent<Renderer>();
             rend.material.SetColor("_EmissionColor", Color.white);
@@ -89,4 +88,3 @@ public class gametwister : MonoBehaviour
         puntos.text = "Puntos: " + total_puntos;
     }
 }
- 

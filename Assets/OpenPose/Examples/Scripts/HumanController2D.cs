@@ -37,21 +37,21 @@ namespace OpenPose.Example {
         private void DrawBody(ref OPDatum datum, int bodyIndex, float scoreThres){
             if (datum.poseKeypoints == null || bodyIndex >= datum.poseKeypoints.GetSize(0)) {
                 PoseParent.gameObject.SetActive(false);
-                //box.GetComponentInChildren<BoxCollider>().enabled = false;
+                // box.GetComponentInChildren<BoxCollider>().enabled = false;
                 // gt.obj_1.tag="Respawn";
                 // PoseParent.tag="Finish";
                 // box.gameObject.tag="Finish";
                 return;
             } else {
                 PoseParent.gameObject.SetActive(true);
-                //box.GetComponentInChildren<BoxCollider>().enabled = true;
-                //Debug.Log("Test!!!!!!!!!!!!");
+                // box.GetComponentInChildren<BoxCollider>().enabled = true;
+                // Debug.Log("Test!!!!!!!!!!!!");
             }
             if(Input.GetKey(KeyCode.E)){
                 // Debug.Log("asdfdfgasdfasdfasdfasdfasdfasdfasdf");
                 // gt.obj_1.tag="Finish";
                 // box.center = box.center + new Vector3(800, 0, 0);
-                //box.GetComponentInChildren<BoxCollider>().enabled = false;
+                // box.GetComponentInChildren<BoxCollider>().enabled = false;
                 // PoseParent.tag="Finish";
                 // box.gameObject.tag="Finish";
             }
@@ -65,13 +65,13 @@ namespace OpenPose.Example {
                     poseJoints[part].gameObject.SetActive(false);
                     continue;
                 }else{
-                    //gt.obj_1.tag="Finish";
-                    //PoseParent.tag="Respawn";
+                    // gt.obj_1.tag="Finish";
+                    // PoseParent.tag="Respawn";
                 }
                 // Compare score
                 if (datum.poseKeypoints.Get(bodyIndex, part, 2) <= scoreThres) {
                     poseJoints[part].gameObject.SetActive(false);
-                    //gt.obj_1.tag="Respawn";
+                    // gt.obj_1.tag="Respawn";
                 } else {
                     poseJoints[part].gameObject.SetActive(true);
                     Vector3 pos = new Vector3(datum.poseKeypoints.Get(bodyIndex, part, 0), datum.poseKeypoints.Get(bodyIndex, part, 1), 0f);
@@ -85,7 +85,7 @@ namespace OpenPose.Example {
                 LHandParent.gameObject.SetActive(false);
             } else {
                 LHandParent.gameObject.SetActive(true);
-                //box.GetComponentInChildren<BoxCollider>().enabled = true;
+                // box.GetComponentInChildren<BoxCollider>().enabled = true;
                 for (int part = 0; part < lHandJoints.Count; part++) {
                     // Joints overflow
                     if (part >= datum.handKeypoints.left.GetSize(1)) {
