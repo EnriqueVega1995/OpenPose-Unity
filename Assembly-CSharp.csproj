@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\OpenPose\Examples\Scripts\boxwrist.cs" />
+     <Compile Include="Assets\OpenPose\Examples\Scripts\character.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\DrawLine.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\gametwister.cs" />
      <Compile Include="Assets\OpenPose\Examples\Scripts\HumanController2D.cs" />
